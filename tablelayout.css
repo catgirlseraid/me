@@ -1,0 +1,230 @@
+/*applies to whole webpage*/
+
+
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(185, 214, 228), white);
+    background-attachment: fixed;
+    color: #192331;
+    width: 100%;
+    height: 100%;
+    
+}
+
+h1 {
+    font-size: 50px;
+    margin: auto;
+}
+
+
+/*dashed line */
+hr {
+    border: 1px dashed lightpink;
+    border-radius: 1px;
+    width: 85%;
+    max-width: 750px;
+    margin: 0px auto ;
+}
+
+
+/*table specific options*/
+caption {
+    caption-side: bottom;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.table input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: none;
+    caret-color: transparent;
+}
+input:focus {
+    background-color: aliceblue;
+    outline: none;
+}
+
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td {
+    border: 2px dashed pink;
+}
+
+
+/*doing solid borders for the grid boxes*/
+
+.left {
+    border-left: 4px solid pink; 
+}
+.right {
+    border-right: 4px solid pink; 
+}
+.top {
+    border-top: 4px solid pink;
+}
+.bottom {
+    border-bottom: 4px solid pink;
+}
+
+/*control buttons*/
+.controlbuttons button {
+    width: 150px;
+    height: 40px;
+    background-color: lightpink;
+    color: #192331;
+    border-color: #192331;
+    border-radius: 5px;
+    margin: 10px;
+}
+.controlbuttons button:active {
+    background-color: aliceblue; 
+}
+
+.controlbuttons button:focus-visible {
+    background-color: aliceblue; 
+}
+
+/*adding a background to incorrect squares*/
+.error {
+    animation: 2s infinite fadeinout;
+    border-radius: 7px;
+}
+
+/*TODO make this look nicer later*/
+.error:focus {
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 0px;
+}
+
+
+
+
+@keyframes fadeinout {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+        background-color: rgb(255, 182, 193, 0.35);
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+/*status bar*/
+#statusmessages {
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+/*stats button and navbar*/
+ .navbar {
+
+
+    width: 100%;
+    height: 60px;
+    background-color: lightpink;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    display: flex;
+ }
+
+#statsdisplaybutton {
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border-color: transparent;
+    float: left;
+    align-self: center;
+    position: absolute;
+}
+
+.navbar img {
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    
+}
+.navbar #statsdisplay {
+    position: absolute;
+    top: 70px;
+    white-space: nowrap;
+    width: min(min-content, 100px);
+    height: 150px;
+    background-color: white;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    
+    border: 2px solid black;
+}
+
+#movementstats {
+    aspect-ratio: 1/1;
+    width: min-content;
+    border-color: black;
+    background-color: transparent;
+    border-radius: 0px 0px 7px 0px;
+    border-left: transparent;
+    border-top: transparent;
+    cursor: move;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+    width: 100%;
+    align-self: flex-end;
+}
+
+#statsdisplaybox {
+    width: 100%;
+    display: flex;
+}
+
+#validatorcountdisplay {
+    margin: 0px 5px;
+}
+
+#refreshforstatsbox {
+    margin-top: auto;
+    border: transparent;
+    border-top: black solid 2px;
+    background-color: transparent;
+}
+
+
+/*gravy time*/
+#gravytime {
+    font-size: 20px;
+    right: 0px;
+    margin-right: 10px;
+    position: absolute;
+}
+
+/*error square that can be changed*/
+.errorchange {
+    color: red;
+}
+
+
+
+
