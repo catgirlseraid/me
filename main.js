@@ -380,7 +380,7 @@ function solveSudoku() {
     
     drawScreen()
 
-    discordWebhook(inputArray)
+    // discordWebhook(inputArray)
     solving = false
     //removes the displayed status
     statusMessage("", 0)
@@ -527,7 +527,8 @@ function validatorForRecursiveSolver() {
 
 //setting up variables i need
 let sudokuAlgorithmNumbers = undefined
-
+let mutatablePossibleNumbers = []
+let allPossibleNumbersList = []
 
 
 //TODO this is broken/never worked
@@ -551,7 +552,7 @@ function solveSudokuRecursive() {
     squarePossibleNumbersDelete[0][0] = true
     //debug
     let startTime = window.performance.now()
-    let mutatablePossibleNumbers = JSON.parse(JSON.stringify(validNumbersToTry))
+    mutatablePossibleNumbers = JSON.parse(JSON.stringify(validNumbersToTry))
 
 
 
@@ -632,10 +633,15 @@ function solveSudokuRecursive() {
                 backtracking = false
                 //place the number and move to next number
                 sudokuAlgorithmNumbers[row][column] = `${mutatablePossibleNumbers[row][column][0]}`
+
+                console.log("number placed")
                 //remove it from possible numbers so it won't be tried again?
-                //this logic seem wrong?
+                
+               // removeFromMutatePossibleNumbers(mutatablePossibleNumbers[row][column][0], row, column)
+
+                //TODO might need later
                 mutatablePossibleNumbers[row][column].shift()
-                column++ 
+                column++
                 break
                 
             } else {
@@ -643,6 +649,10 @@ function solveSudokuRecursive() {
                 if (mutatablePossibleNumbers[row][column][1] === undefined) {
                     //reset possible numbers for that square
                     mutatablePossibleNumbers[row][column] = JSON.parse(JSON.stringify(validNumbersToTry[row][column]))
+
+                    //reset possible numbers to backup before recurse
+
+
                     //go backwards
                     backtracking = true
                     column--
@@ -657,18 +667,69 @@ function solveSudokuRecursive() {
     }     
 }
 
+function removeFromMutatePossibleNumbers(number, row, column) {
+    console.log("number to be removed")
+    console.log(number)
+    console.log("row")
+    console.log(row)
+    console.log("column")
+    console.log(column)
+
+    //removing duplicate numbers along the row
+    let index = undefined
+
+    for (e = 0; e < 9; e++) {
+        if (mutatablePossibleNumbers[row][e].includes(number)) {
+            index = mutatablePossibleNumbers[row][e].indexOf(number)
+            mutatablePossibleNumbers[row][e].splice(index, 1)
+        }
+    }
+
+    //removing duplicated numbers vertically
+    for (e = 0; e < 9; e++) {
+        if (mutatablePossibleNumbers[e][column].includes(number)) {
+            index = mutatablePossibleNumbers[e][column].indexOf(number)
+            mutatablePossibleNumbers[e][column].splice(index, 1)
+        }
+    }
+    
+    //validating boxes 
+    //TODO there has to be a better way to do this
+    let verticalStart = (Math.floor(row / 3))*3
+    let verticalEnd = ((Math.floor(row / 3))*3)+3
+    let horizontalStart = (Math.floor(column / 3))*3
+    let horizontalEnd = ((Math.floor(column / 3))*3)+3
+
+    let boxNumToCheck = []
+    boxNumToCheck.push([verticalStart, horizontalStart])
+    boxNumToCheck.push([verticalStart, horizontalStart + 1])
+    boxNumToCheck.push([verticalStart, horizontalStart + 2])
+    boxNumToCheck.push([verticalStart + 1, horizontalStart])
+    boxNumToCheck.push([verticalStart + 1, horizontalStart + 1])
+    boxNumToCheck.push([verticalStart + 1, horizontalStart + 2])
+    boxNumToCheck.push([verticalStart + 2, horizontalStart])
+    boxNumToCheck.push([verticalStart + 2, horizontalStart + 1])
+    boxNumToCheck.push([verticalStart + 2, horizontalStart + 2])
+
+    for (let array of boxNumToCheck) {
+        if (mutatablePossibleNumbers[array[0]][array[1]].includes(number)) {
+            index = mutatablePossibleNumbers[array[0]][array[1]].indexOf(number)
+            mutatablePossibleNumbers[array[0]][array[1]].splice(index, 1)
+        }
+    }
+}
 
 
 //sending progress to discord webhook
-function discordWebhook(message) {
-    fetch("https://discord.com/api/webhooks/1222013599988580474/yATpHppwXInuPIHEvgoIgVFEAjeEipfB33GpMkV1p1REJjaSWx9mkTYbYxWPQNSRfEXs", {
-        method:"POST", 
-        headers: {
-            "Content-Type": "application/json",
-        }, 
-        body: JSON.stringify({
-            content: `${message}`
-        })
-    }).catch(() => {})
+// function discordWebhook(message) {
+//     fetch("https://discord.com/api/webhooks/1222013599988580474/yATpHppwXInuPIHEvgoIgVFEAjeEipfB33GpMkV1p1REJjaSWx9mkTYbYxWPQNSRfEXs", {
+//         method:"POST", 
+//         headers: {
+//             "Content-Type": "application/json",
+//         }, 
+//         body: JSON.stringify({
+//             content: `${message}`
+//         })
+//     }).catch(() => {})
 
-}
+// }
