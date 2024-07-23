@@ -3,9 +3,71 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/images/icon.jpg">
+        <link href="index.css" rel="stylesheet">
         <title>catgirlseraid :3</title>
+
+        <!--handles footer opacity-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const footer = document.querySelector('footer');
+                function handleScroll() {
+                    const documentHeight = document.documentElement.scrollHeight;
+                    const windowHeight = window.innerHeight;
+                    const scrollPosition = window.scrollY;
+                    const distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+                    const opacity = Math.min(1, 1 - (distanceToBottom / 40)); // 200px range for opacity change
+                    footer.style.opacity = opacity;
+                }
+                window.addEventListener('scroll', handleScroll);
+                handleScroll();
+            });
+        </script>
     </head>
     <body>
-        title
+        <section>
+            <h2>Me!</h2>
+            <div class="text-content">
+                <div class="wrapper">
+                    <p>Hi, I'm Phoebe, a 20 year old from New Zealand. </p>
+                    <p>My pronouns are </p>
+                    <p class="pronouns">she/her</p><p class="negative-spacing">.</p>
+                    <p>I do random things on the internet. :3 </p>
+                    <p>Feel free to contact me anywhere listed below.</p>
+                </div>
+    
+                <ul>
+                    <li>Discord: @seraid</li>
+                    <li>Github: <a href="https://github.com/catgirlseraid">catgirlseraid</a>   </li>
+                    <li>Email: seraid743@gmail.com</li>
+                </ul>
+                <p>I'll finish this any moment now </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Projects</h2>
+            <a href="https://github.com/hannibal002/SkyHanni">Skyhanni</a>
+            <a href="https://hdyc.neis-one.org/?catgirlseraid">OpenStreetMap</a>
+            <a href="sudoku-solver.html">Sudoku Solver</a>
+
+        </section>
+
+        <section>
+            <h2>Plushies!</h2>
+            <p> placeholder image for now</p>
+            <img src="images/plushies.JPG" class="contentimage">
+        </section>
+
+
+        <div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+         </div>
+
+         <footer>
+            <a href="https://github.com/catgirlseraid/My-Website">❤️ catgirlseraid 2024</a>
+         </footer>
     </body>
 </html>

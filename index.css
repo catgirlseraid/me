@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 75%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+section p {
+    display: inline-block; 
+    margin: 0; 
+}
+
+section p + p {
+    margin-left: 15px;
+}
+
+section:hover {
+    border: 2px solid rgb(245, 169, 184);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*this background is from https://codepen.io/baarbaracrr/pen/KKovmGb*/
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(0, 0, 0) 3%, rgb(245, 169, 184) 38%, rgb(91, 206, 250) 68%, rgb(0, 0, 0) 98%);
+    animation: gradient 60s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 100px;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(1);
+    }
+}
+
+footer {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(0, 0, 0, 1);
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.contentimage {
+    width: 100%;
+}
+
+img {
+    border-top: 2px solid #000000;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+@keyframes flagAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.pronouns { 
+    background: linear-gradient(90deg, #55CDFC, #F7A8B8, #FFFFFF, #F7A8B8, #55CDFC);
+    background-size: 300% 300%;
+    color: transparent;
+    -webkit-background-clip: text; 
+    background-clip: text;
+    animation: flagAnimation 8s ease infinite;
+    padding: 2px; 
+}
+
+.wrapper {
+    text-align: center; 
+}
+
+.wrapper p {
+    display: inline-block; 
+    margin: 0; /* Remove all margins */
+}
+
+.text-content {
+    padding: 10px;
+}
