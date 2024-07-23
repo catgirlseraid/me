@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="tablelayout.css" rel="stylesheet">
+        <title>Sudoku Solver</title>
+        <script src="sudoku.js" defer></script>
+    </head>
+    <body>
+
+        <section>
+            
+            <nav class="navbar">
+                <button id="statsdisplaybutton"><img src="images/statsicon.png" alt="🔢 stats" title="Stats"></a></button>
+                <div id="statsdisplay" style="display: none;">
+                    <div id="statsdisplaybox">
+                        <button id="movementstats">✥</button>
+                        <h2>Stats</h2>
+                    </div>
+
+                    <hr>
+                    <div id="validatorcountdisplay"></div>
+                    <div id="timetakentosolvesudoku"></div>
+                    <button id="refreshforstatsbox">Refresh</button>
+                </div>
+                <h1>Sudoku Solver</h1>
+                <div id="gravytimenavbardisplay">
+                    <p id="gravytime">loading...</p>
+                </div>
+                
+            </nav>
+            
+            <hr>
+            <div class="table">
+                <p id="statusmessages"></p>
+                <div id="linebelowstatusbar"></div>
+                <table id="sudoku">
+                    <caption>Type in numbers to begin!</caption>
+                    <tr>
+                        <td class="left top"><input id="a1" type="text" maxlength="1"></td>
+                        <td class="top"><input  id="a2" type="text" maxlength="1"></td>
+                        <td class="top"><input id="a3" type="text" maxlength="1"></td>
+                        <td class=" left top"><input id="a4" type="text" maxlength="1"></td>
+                        <td class="top"><input id="a5" type="text" maxlength="1"></td>
+                        <td class="top"><input id="a6" type="text" maxlength="1"></td>
+                        <td class="left top"><input id="a7" type="text" maxlength="1"></td>
+                        <td class="top"><input id="a8" type="text" maxlength="1"></td>
+                        <td class="right top"><input id="a9" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="left"><input id="b1" type="text" maxlength="1"></td>
+                        <td><input id="b2" type="text" maxlength="1"></td>
+                        <td><input id="b3" type="text" maxlength="1"></td>
+                        <td class="left"><input id="b4" type="text" maxlength="1"></td>
+                        <td><input id="b5" type="text" maxlength="1"></td>
+                        <td><input id="b6" type="text" maxlength="1"></td>
+                        <td class="left"><input id="b7" type="text" maxlength="1"></td>
+                        <td><input id="b8" type="text" maxlength="1"></td>
+                        <td class="right"><input id="b9" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="left"><input id="c1" type="text" maxlength="1"></td>
+                        <td><input id="c2" type="text" maxlength="1"></td>
+                        <td><input id="c3" type="text" maxlength="1"></td>
+                        <td class="left"><input id="c4" type="text" maxlength="1"></td>
+                        <td><input id="c5" type="text" maxlength="1"></td>
+                        <td><input id="c6" type="text" maxlength="1"></td>
+                        <td class="left"><input id="c7" type="text" maxlength="1"></td>
+                        <td><input id="c8" type="text" maxlength="1"></td>
+                        <td class="right"><input id="c9" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="left top"><input id="d1" type="text" maxlength="1"></td>
+                        <td class="top"><input id="d2" type="text" maxlength="1"></td>
+                        <td class="top"><input id="d3" type="text" maxlength="1"></td>
+                        <td class="left top"><input id="d4" type="text" maxlength="1"></td>
+                        <td class="top"><input id="d5" type="text" maxlength="1"></td>
+                        <td class="top"><input id="d6" type="text" maxlength="1"></td>
+                        <td class="left top"><input id="d7" type="text" maxlength="1"></td>
+                        <td class="top"><input id="d8" type="text" maxlength="1"></td>
+                        <td class="right top"><input id="d9" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td  class="left"><input id="e1" type="text" maxlength="1"></td>
+                        <td><input id="e2" type="text" maxlength="1"></td>
+                        <td><input id="e3" type="text" maxlength="1"></td>
+                        <td class="left"><input id="e4" type="text" maxlength="1"></td>
+                        <td><input id="e5" type="text" maxlength="1"></td>
+                        <td><input id="e6" type="text" maxlength="1"></td>
+                        <td class="left"><input id="e7" type="text" maxlength="1"></td>
+                        <td><input id="e8" type="text" maxlength="1"></td>
+                        <td class="right"><input id="e9" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td  class="left"><input id="f1" type="text" maxlength="1"></td>
+                        <td><input id="f2" type="text" maxlength="1"></td>
+                        <td><input id="f3" type="text" maxlength="1"></td>
+                        <td class="left"><input id="f4" type="text" maxlength="1"></td>
+                        <td><input id="f5" type="text" maxlength="1"></td>
+                        <td><input id="f6" type="text" maxlength="1"></td>
+                        <td class="left"><input id="f7" type="text" maxlength="1"></td>
+                        <td><input id="f8" type="text" maxlength="1"></td>
+                        <td class="right"><input id="f9" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="left top"><input id="g1" type="text" maxlength="1"></td>
+                        <td class="top"><input id="g2" type="text" maxlength="1"></td>
+                        <td class="top"><input id="g3" type="text" maxlength="1"></td>
+                        <td class="left top"><input id="g4" type="text" maxlength="1"></td>
+                        <td class="top"><input id="g5" type="text" maxlength="1"></td>
+                        <td class="top"><input id="g6" type="text" maxlength="1"></td>
+                        <td class="left top"><input id="g7" type="text" maxlength="1"></td>
+                        <td class="top"><input id="g8" type="text" maxlength="1"></td>
+                        <td class="right top"><input id="g9" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="left"><input id="h1" type="text" maxlength="1"></td>
+                        <td><input id="h2" type="text" maxlength="1"></td>
+                        <td><input id="h3" type="text" maxlength="1"></td>
+                        <td class="left"><input id="h4" type="text" maxlength="1"></td>
+                        <td><input id="h5" type="text" maxlength="1"></td>
+                        <td><input id="h6" type="text" maxlength="1"></td>
+                        <td class="left"><input id="h7" type="text" maxlength="1"></td>
+                        <td><input id="h8" type="text" maxlength="1"></td>
+                        <td class="right"><input id="h9" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="left bottom"><input id="i1" type="text" maxlength="1"></td>
+                        <td class="bottom"><input id="i2" type="text" maxlength="1"></td>
+                        <td class="bottom"><input id="i3" type="text" maxlength="1"></td>
+                        <td class="left bottom"><input id="i4" type="text" maxlength="1"></td>
+                        <td class="bottom"><input id="i5" type="text" maxlength="1"></td>
+                        <td class="bottom"><input id="i6" type="text" maxlength="1"></td>
+                        <td class="left bottom"><input id="i7" type="text" maxlength="1"></td>
+                        <td class="bottom"><input id="i8" type="text" maxlength="1"></td>
+                        <td class="right bottom"><input id="i9" type="text" maxlength="1"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="controlbuttons">
+            <button id="cleartable">Clear Table</button>
+            <button id="solvesudoku">Solve</button><br>
+            <button id="loadsudoku">Load Sudoku</button>
+            <button id="savesudoku">Save Sudoku</button>
+        </section>
+
+    </body>
+</html>
