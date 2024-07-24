@@ -25,37 +25,81 @@
         </script>
     </head>
     <body>
-        <section>
-            <h2>Me!</h2>
-            <div class="text-content">
-                <div class="wrapper">
-                    <p>Hi, I'm Phoebe, a 20 year old from New Zealand. </p>
-                    <p>My pronouns are </p>
-                    <p class="pronouns">she/her</p><p class="negative-spacing">.</p>
-                    <p>I do random things on the internet. :3 </p>
-                    <p>Feel free to contact me anywhere listed below.</p>
-                </div>
-    
-                <ul>
-                    <li>Discord: @seraid</li>
-                    <li>Github: <a href="https://github.com/catgirlseraid">catgirlseraid</a>   </li>
-                    <li>Email: seraid743@gmail.com</li>
-                </ul>
-                <p>I'll finish this any moment now </p>
+<section class="about-me">
+    <h2 class="section-title">Me!</h2>
+    <div class="text-content">
+        <div class="text-wrapper">
+            <p>Hi, I'm Phoebe, a 20 year old from New Zealand.</p>
+            <p>My pronouns are <span class="pronouns">she/her</span>.</p>
+            <p class="special-margin">I do random things on the internet. :3</p>
+            <p>Feel free to contact me anywhere listed below.</p>
+        </div>
+
+        <div class="contact-list">
+            <div class="contact-list-entry">
+                <img src="images/discord-logo.png">
+                <p class="float-left">Discord:</p>
+                <p class="float-right">@seraid</p>
             </div>
-        </section>
+        
+            <div class="contact-list-entry">
+                <img src="images/github-logo.png">
+                <p class="float-left">Github:</p>
+                <a class="float-right contact-link" href="https://github.com/catgirlseraid">catgirlseraid</a>
+            </div>
+        
+            <div class="contact-list-entry">
+                <img src="images/email-logo.png">
+                <p class="float-left">Email:</p>
+                <a class="float-right contact-link" href="mailto:seraid743@gmail.com">seraid743@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section>
             <h2>My Projects</h2>
-            <a href="https://github.com/hannibal002/SkyHanni">Skyhanni</a>
-            <a href="https://hdyc.neis-one.org/?catgirlseraid">OpenStreetMap</a>
-            <a href="sudoku-solver.html">Sudoku Solver</a>
-
+            <div class="side-by-side-container">
+                <div class="projects">
+                    <div class="project-container">
+                        <div class="project-display">
+                            <img src="https://wiki.openstreetmap.org/w/images/c/c8/Public-images-osm_logo.png?20110430164439">
+                            <a href="https://hdyc.neis-one.org/?catgirlseraid">OpenStreetMap</a>
+                        </div>
+                        <div class="project-description">
+                            <p>A open source map of the world I like to contribute to in my spare time. I have no preference for things to map and will work on whatever interests me.</p>
+                        </div>
+                    </div>
+                    <div class="project-container">
+    
+                        <div class="project-display">
+                            <img src="images/icon.jpg">
+                            <a href="sudoku-solver.html">Sudoku Solver</a>
+                        </div>
+                        <div class="project-description">
+                            <p>A Sudoku Solver I made in JS. Works fine for now but there's plently more optimisations i could do. Was one of my first projects.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="funny-margin"></div>
+                <div class="projects">
+                    <div class="project-container">
+                        <div class="project-display">
+                            <img src="https://github.com/hannibal002/SkyHanni/blob/beta/src/main/resources/assets/skyhanni/logo.png?raw=true">
+                            <a href="https://github.com/hannibal002/SkyHanni">Skyhanni</a>
+                        </div>
+                        <div class="project-description">
+                            <p>SkyHanni is a Forge mod for Minecraft 1.8.9 that adds many useful features to Hypixel SkyBlock. I contribute features i find interesting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
 
         <section>
             <h2>Plushies!</h2>
-            <p> placeholder image for now</p>
             <img src="images/plushies.JPG" class="contentimage">
         </section>
 

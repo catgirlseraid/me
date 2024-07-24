@@ -11,7 +11,7 @@ section {
     flex-direction: column; 
     align-items: center;
     width: 75%;
-    max-width: 1000px;
+    max-width: 1320px;
     margin: auto;
     margin-top: 20px;
     border: 2px solid #000000;
@@ -32,7 +32,7 @@ section p + p {
 
 section:hover {
     border: 2px solid rgb(245, 169, 184);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
 }
 
 /*this background is from https://codepen.io/baarbaracrr/pen/KKovmGb*/
@@ -122,14 +122,13 @@ footer {
 }
 
 .contentimage {
-    width: 100%;
+    width: 95%;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
 }
 
-img {
-    border-top: 2px solid #000000;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
+
 
 a {
     text-decoration: none; 
@@ -169,4 +168,146 @@ a {
 
 .text-content {
     padding: 10px;
+}
+
+.project-container {
+    
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    margin: 10px;
+    
+
+    transition: transform 0.3s;
+}
+
+.project-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgb(249, 249, 249, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.project-display img {
+    border: 0;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.project-display a {
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-display a:hover {
+    color: rgb(247, 168, 184, 1);
+    text-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
+}
+
+.project-description {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(249, 249, 249, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    height: 128px;
+    margin-top: -15px;
+}
+
+@media (max-width: 650px) {
+    .project-container {
+        flex-direction: column;
+    }
+    .project-display {
+        margin-right: 0px;
+        margin-bottom: 10px;
+        width: 75%;
+
+    }
+    .project-description {
+        width: 75%;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1320px) {
+    .side-by-side-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; 
+    }
+}
+
+@media (min-width: 1340px) {
+    .funny-margin {
+        width: 30px;
+    }
+}
+
+.about-me {
+    text-align: center;
+}
+
+.text-wrapper {
+    max-width: 500px;
+}
+
+.contact-list {
+ display: flex;
+ flex-direction: column;
+ margin: 10px;
+ margin-top: 30px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between contact entries */
+}
+
+.contact-list-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.contact-list-entry img {
+    height: 15px;
+}
+
+.float-left {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.float-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.special-margin {
+    margin-left: 0px;
 }
