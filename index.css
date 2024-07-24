@@ -61,6 +61,29 @@ body {
     }
 }
 
+/*
+trying stuff
+*/
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+body {
+    -webkit-animation: gradient 60s ease infinite;
+    animation: gradient 60s ease infinite;
+}
+/*
+end
+*/
+
 .wave {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
     border-radius: 1000% 1000% 0 0;
