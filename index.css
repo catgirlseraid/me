@@ -159,6 +159,14 @@ a {
     padding: 2px; 
 }
 
+.pronouns-wrapper {
+    display: inline-block;
+    position: relative;
+    padding: 2px; /* Match padding to that of .pronouns */
+    background: rgba(0, 0, 0, 1); /* Base color for the background */
+    border-radius: 4px; /* Optional: to give a rounded background */
+}
+
 .wrapper {
     text-align: center; 
 }
@@ -312,4 +320,18 @@ a {
 
 .special-margin {
     margin-left: 0px;
+}
+
+.musicimg {
+    height: 100px;
+    width: 100px;
+}
+
+.playlistcontainer {
+    width: 250px;
+    border: #000000 solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
