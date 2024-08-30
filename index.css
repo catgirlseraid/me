@@ -341,7 +341,7 @@ a {
 }
 
 .playlist-name {
-    margin: auto;
+    margin: 5px;
 }
 
 .playlist-name:hover {
