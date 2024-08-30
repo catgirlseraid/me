@@ -328,12 +328,11 @@ a {
     float: left;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
-    border-right: 2px solid black;
 }
 
 .playlistcontainer {
     width: 50%;
-    border: #000000 solid 2px;
+    min-width: 200px;
     display: flex;
     align-items: center;
     border-radius: 10px;
