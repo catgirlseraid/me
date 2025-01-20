@@ -1,0 +1,24 @@
+.footer {
+    
+}
+
+body {
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(0, 0, 0) 2%, rgb(245, 169, 184) 34%, rgb(91, 206, 250) 66%, rgb(0, 0, 0) 98%);
+    animation: gradient 60s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    position: relative;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 25% 25%;
+    }
+    50% {
+        background-position: 85% 85%;
+    }
+    100% {
+        background-position: 25% 25%;
+    }
+}
