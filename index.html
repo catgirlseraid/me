@@ -7,21 +7,7 @@
         <link href="index.css" rel="stylesheet">
         <title>catgirlseraid ♡</title>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const footer = document.querySelector('footer');
-                function handleScroll() {
-                    const documentHeight = document.documentElement.scrollHeight;
-                    const windowHeight = window.innerHeight;
-                    const scrollPosition = window.scrollY;
-                    const distanceToBottom = documentHeight - (scrollPosition + windowHeight);
-                    const opacity = Math.min(1, 1 - (distanceToBottom / 40)); 
-                    footer.style.opacity = opacity;
-                }
-                window.addEventListener('scroll', handleScroll);
-                handleScroll();
-            });
-        </script>
+        <script src="footer.js"></script>
     </head>
     <body>
 <section class="about-me">
