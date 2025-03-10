@@ -36,74 +36,17 @@ section:hover {
     box-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
 }
 
-/*this background is from https://codepen.io/baarbaracrr/pen/KKovmGb*/
 body {
     margin: auto;
     padding-top: 20px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
-    background: linear-gradient(315deg, rgb(0, 0, 0) 3%, rgb(245, 169, 184) 38%, rgb(91, 206, 250) 68%, rgb(0, 0, 0) 98%);
+    background: linear-gradient(315deg, rgb(0, 0, 0) 2%, rgb(245, 169, 184) 34%, rgb(91, 206, 250) 66%, rgb(0, 0, 0) 98%);
     animation: gradient 60s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
     position: relative;
     padding-bottom: 50px;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
-
-.wave {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
-    border-radius: 1000% 1000% 0 0;
-    position: fixed;
-    width: 200%;
-    height: 100px;
-    animation: wave 10s -3s linear infinite;
-    transform: translate3d(0, 0, 0);
-    opacity: 0.8;
-    bottom: 0;
-    left: 0;
-    z-index: -2;
-}
-
-.wave:nth-of-type(2) {
-    bottom: -1.25em;
-    animation: wave 18s linear reverse infinite;
-    opacity: 0.8;
-}
-
-.wave:nth-of-type(3) {
-    bottom: -2.5em;
-    animation: wave 20s -1s reverse infinite;
-    opacity: 0.9;
-}
-
-@keyframes wave {
-    2% {
-        transform: translateX(1);
-    }
-    25% {
-        transform: translateX(-25%);
-    }
-    50% {
-        transform: translateX(-50%);
-    }
-    75% {
-        transform: translateX(-25%);
-    }
-    100% {
-        transform: translateX(1);
-    }
 }
 
 footer {
@@ -129,8 +72,6 @@ footer {
     margin-bottom: 28px;
     box-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
 }
-
-
 
 a {
     text-decoration: none; 
@@ -162,9 +103,9 @@ a {
 .pronouns-wrapper {
     display: inline-block;
     position: relative;
-    padding: 2px; /* Match padding to that of .pronouns */
-    background: rgba(0, 0, 0, 1); /* Base color for the background */
-    border-radius: 4px; /* Optional: to give a rounded background */
+    padding: 2px; 
+    background: rgba(0, 0, 0, 1); 
+    border-radius: 4px;
 }
 
 .wrapper {
@@ -173,7 +114,7 @@ a {
 
 .wrapper p {
     display: inline-block; 
-    margin: 0; /* Remove all margins */
+    margin: 0; 
 }
 
 .text-content {
@@ -289,13 +230,13 @@ a {
 .contact-list {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Space between contact entries */
+    gap: 10px;
 }
 
 .contact-list-entry {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px; 
 }
 
 .contact-list-entry img {
@@ -326,12 +267,15 @@ a {
     height: 100px;
     width: 100px;
     float: left;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
 }
 
 .playlistcontainer {
+    padding: 0;
     width: 50%;
+    height: 100px;
     min-width: 200px;
     display: flex;
     align-items: center;
@@ -340,6 +284,8 @@ a {
     background-color: rgb(249, 249, 249, 0.1);
 }
 
+
+/*something about this messed up any further playlists :(*/
 .playlist-name {
     margin: 5px;
 }
