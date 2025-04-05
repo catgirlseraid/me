@@ -47,25 +47,11 @@
             padding-top: 20px;
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             overflow: auto;
-            background: linear-gradient(315deg, rgb(0, 0, 0) 2%, rgb(245, 169, 184) 34%, rgb(91, 206, 250) 66%, rgb(0, 0, 0) 98%);
-            animation: gradient 60s ease infinite;
-            background-size: 400% 400%;
-            background-attachment: fixed;
+            background-color: #333333;
+            background-image: url(images/topography.svg);
             position: relative;
             padding-bottom: 50px;
         }
-
-        @keyframes gradient {
-        0% {
-        background-position: 0% 0%;
-         }
-        50% {
-        background-position: 100% 100%;
-        }
-        100% {
-        background-position: 0% 0%;
-    }
-}
 
         .rounded {
             border-radius: 10px;
@@ -78,7 +64,7 @@
             padding: 10px 40px;
             border: 2px solid #000000;
             border-radius: 20px;
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.25);
         }
 
         footer {
@@ -94,7 +80,7 @@
             padding: 10px 0;
             z-index: 1000;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 1s ease;
             margin-bottom: 5px;
             
         }
@@ -196,11 +182,12 @@
           <img src="osm_micromapping/woodstock_nsw_micromapping_after.png" width="750" height="450" class="rounded">
         </div>
         <div class="img-comp-img img-comp-overlay">
-          <img src="osm_micromapping/woodstock_nsw_micromapping_before.png" width="750" height="450" class="rounded">
+            <img src="osm_micromapping/woodstock-nsw-micromapping-before-adjusted.png" width="750" height="450" class="rounded">
         </div>
     </div>
     <p>description</p>
 </div>
+
 
 
 
