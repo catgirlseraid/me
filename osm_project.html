@@ -1,18 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>catgirlseraid ♡</title>
+
+    <script src="footer.js"></script>
+
+    <style>
+        * {box-sizing: border-box;}
+
+        .img-comp-container {
+        position: relative;
+        height: 450px; 
+        margin: 10px;
+        }
+
+        .img-comp-img {
+        position: absolute;
+        width: auto;
+        height: auto;
+        overflow:hidden;
+        }
+
+        .img-comp-img img {
+        display:block;
+        vertical-align:middle;
+        }
+
+        .img-comp-slider {
+        position: absolute;
+        z-index:1;
+        cursor: ew-resize;
+        width: 40px;
+        height: 40px;
+        background-color: #000000;
+        opacity: 1;
+        }
+
+        h1, p {
+            margin: 0;
+        }
+
+        body {
+            text-align: center;
+            margin: auto;
+            padding-top: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow: auto;
+            background-color: #333333;
+            background-image: url(images/topography.svg);
+            position: relative;
+            padding-bottom: 50px;
+        }
+
+        .rounded {
+            border-radius: 10px;
+        }
+
+        .per-image-display {
+            margin: 0 auto;
+            width: 850px;
+            padding-left: 40px;
+            padding: 10px 40px;
+            border: 2px solid #000000;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        footer {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: rgb(0, 0, 0, 1);
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            margin-bottom: 5px;
+            
+        }
+
+        a {
+            text-decoration: none; 
+            color: inherit; 
+        }
+    </style>
+
+    <script>
+        // script from https://www.w3schools.com/howto/howto_js_image_comparison.asp--> 
+        function initComparisons() {
+            var x, i;
+            x = document.getElementsByClassName("img-comp-overlay");
+            for (i = 0; i < x.length; i++) {
+                compareImages(x[i]);
+            }
+
+        function compareImages(img) {
+            var slider, img, clicked = 0, w, h;
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+
+            img.style.width = (w / 2) + "px";
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            img.parentElement.insertBefore(slider, img);
+
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+
+            slider.addEventListener("mousedown", slideReady);
+            window.addEventListener("mouseup", slideFinish);
+            slider.addEventListener("touchstart", slideReady);
+            window.addEventListener("touchend", slideFinish);
+
+            function slideReady(e) {
+            e.preventDefault();
+            clicked = 1;
+
+            window.addEventListener("mousemove", slideMove);
+            window.addEventListener("touchmove", slideMove);
+            }
+            function slideFinish() {
+            clicked = 0;
+            }
+            function slideMove(e) {
+            var pos;
+            if (clicked == 0) return false;
+
+            pos = getCursorPos(e)
+
+            if (pos < 0) pos = 0;
+            if (pos > w) pos = w;
+
+            slide(pos);
+            }
+
+            function getCursorPos(e) {
+            var a, x = 0;
+            e = (e.changedTouches) ? e.changedTouches[0] : e;
+            a = img.getBoundingClientRect();
+            x = e.pageX - a.left;
+            x = x - window.pageXOffset;
+            return x;
+            }
+
+            function slide(x) {
+            img.style.width = x + "px";
+            slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+        }
+        }
+        initComparisons();
+    </script>
+
 </head>
 <body>
 
-    <p>this page is not even close to being finished sorry </p>
-    <img src="osm_micromapping/woodstock_nsw_micromapping_before.png">
-    <p>before</p>
-    <br>
-    <img src="osm_micromapping/woodstock_nsw_micromapping_after.png">
-    <p>after</p>
+<div class="per-image-display">
+    <h1>Woodstock NSW</h1>
+    <div class="img-comp-container">
+        <div class="img-comp-img">
+          <img src="osm_micromapping/woodstock_nsw_micromapping_after.png" width="750" height="450" class="rounded">
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+          <img src="osm_micromapping/woodstock-nsw-micromapping-before-adjusted.png" width="750" height="450" class="rounded">
+        </div>
+    </div>
+    <p>Micromapping of Woodstock NSW</p>
+</div>
+<br>
+<div class="per-image-display">
+    <h2>this is still very much a work in progress sorry</h2>
+</div>
+
+
+
+
+
+<script>
+initComparisons();
+</script>
+
+<footer>
+    <a href="bestie.html">❤️ catgirlseraid | phoebe | 2025</a>
+ </footer>
+
 </body>
 </html>
-
