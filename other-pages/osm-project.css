@@ -133,6 +133,16 @@ section {
     margin-bottom: 20px;
 }
 
+section a {
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+section a:hover {
+    color: rgba(247, 168, 184, 1);
+    text-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
+}
+
 section:hover {
     border: 2px solid rgb(245, 169, 184);
     box-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
