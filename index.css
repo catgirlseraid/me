@@ -250,19 +250,10 @@ a {
     margin-left: 0px;
 }
 
-.musicimg {
-    height: 100px;
-    width: 100px;
-    float: left;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    
-}
 
 .playlistcontainer {
-    padding: 0;
+    padding: 0px;
     width: 50%;
-    height: 100px;
     min-width: 200px;
     display: flex;
     align-items: center;
@@ -274,7 +265,8 @@ a {
 
 /*something about this messed up any further playlists :(*/
 .playlist-name {
-    margin: 5px;
+    margin: 0 auto;
+    font-weight: bold;
 }
 
 .playlist-name:hover {
@@ -285,4 +277,12 @@ a {
 .style-link {
     color: #55CDFC;
     text-decoration: underline;
+}
+
+.musicimg {
+    height: 100px;
+    width: 100px;
+    float: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }

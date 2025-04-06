@@ -4,7 +4,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
     background-color: #333333;
-    background-image: url(images/topography.svg);
+    background-image: url(../images/topography.svg);
     position: relative;
     padding-bottom: 50px;
 }
