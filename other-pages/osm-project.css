@@ -241,3 +241,7 @@ footer a {
     font-weight: bold;
     margin-top: 5px;
 }
+
+.bottom-15px-margin {
+    margin-bottom: 15px;
+}
