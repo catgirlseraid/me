@@ -187,6 +187,12 @@ footer a {
     margin-top: 50px;
 }
 
+.projects a {
+    margin: 0;
+    padding: 5px;
+    display:inline-block;
+}
+
 .about a:hover {
     text-decoration: none;
     color: rgb(247, 168, 184, 1);
@@ -207,10 +213,6 @@ footer a {
 
 .bottom-margin-10px {
     margin-bottom: 10px;
-}
-
-.bottom-margin-5px {
-    margin-bottom: 5px;
 }
 
 .links-container {
