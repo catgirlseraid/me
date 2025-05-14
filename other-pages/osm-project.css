@@ -266,3 +266,11 @@ footer a {
 .bottom-15px-margin {
     margin-bottom: 15px;
 }
+
+.lower {
+    transition: transform 0.2s;
+}
+    
+.lower:hover {
+    transform: translateY(-3px);
+}
