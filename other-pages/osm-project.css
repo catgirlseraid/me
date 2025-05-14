@@ -199,6 +199,22 @@ footer a {
     text-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
 }
 
+.about details a{
+    margin: 0;
+    padding: 0;
+}
+
+.pink-link {
+    text-decoration: none;
+    color: rgb(247, 168, 184, 1);
+}
+
+.pink-link:hover {
+    text-decoration: none;
+    color: rgb(247, 168, 184, 1);
+    text-shadow: 0 4px 8px rgba(250, 250, 250, 0.3);
+}
+
 .about h1 {
     font-size: xx-large;
 }
@@ -209,6 +225,10 @@ footer a {
 
 .about p {
     margin: 5px;
+}
+
+.top-margin-5px {
+    margin-bottom: 5px;
 }
 
 .bottom-margin-10px {
