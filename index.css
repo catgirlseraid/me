@@ -168,6 +168,8 @@ a {
     margin-top: -15px;
 }
 
+
+
 @media (max-width: 650px) {
     .project-container {
         flex-direction: column;
@@ -176,7 +178,6 @@ a {
         margin-right: 0px;
         margin-bottom: 10px;
         width: 75%;
-
     }
     .project-description {
         width: 75%;
@@ -184,6 +185,18 @@ a {
         margin-bottom: 10px;
     }
 }
+
+@media (max-width: 480px) {
+    .project-display {
+        width: 95%;
+    }
+    .project-description {
+        width: 95%;
+    }
+    section {
+        width: 90%;
+    }
+} 
 
 @media (min-width: 1320px) {
     .side-by-side-container {
